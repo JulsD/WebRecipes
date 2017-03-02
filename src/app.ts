@@ -2,7 +2,7 @@ import * as _ from "lodash";
 
 import { cats } from './cats';
 
-let style = require<any>('./style.css');
+import './style.scss';
 
 console.log(cats);
 

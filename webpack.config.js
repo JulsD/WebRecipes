@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CheckPlugin = require('npm-check-webpack-plugin');
 
 module.exports = {
   entry: './src/app.ts',
@@ -10,19 +11,26 @@ module.exports = {
     path: path.resolve(__dirname, 'app')
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
   module: {
     loaders: [
       {
         test: /\.tsx?$/,
-        loader: "ts-loader"
+        loader: 'awesome-typescript-loader'
       },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ['css-loader']
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+            use: [{
+                loader: "css-loader"
+            }, {
+                loader: "postcss-loader"
+            }, {
+                loader: "sass-loader"
+            }],
+            // use style-loader in development
+            fallback: "style-loader"
         })
       }
     ]
@@ -39,5 +47,9 @@ module.exports = {
             comments: false,
         },
     }),
+    new CheckPlugin({
+      autoInstall: false,
+      silent: true
+    })
   ]
 };
