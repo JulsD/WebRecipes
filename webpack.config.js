@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CheckPlugin = require('npm-check-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/app.ts',
@@ -46,6 +47,12 @@ module.exports = {
         output: {
             comments: false,
         },
+    }),
+    new HtmlWebpackPlugin({
+      title: 'WebRecipes',
+      cache: true,
+      template: 'src/index.html',
+      inject: true
     }),
     new CheckPlugin({
       autoInstall: false,

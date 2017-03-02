@@ -2,7 +2,7 @@ import * as _ from "lodash";
 
 import { cats } from './cats';
 
-import './style.scss';
+import './scss/style.scss';
 
 console.log(cats);
 
@@ -15,4 +15,4 @@ function component () {
   return element;
 }
 
-document.body.appendChild(component());
+document.body.querySelector('h1').appendChild(component());
