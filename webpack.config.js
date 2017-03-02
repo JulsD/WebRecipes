@@ -18,7 +18,8 @@ module.exports = {
     loaders: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
+        loader: 'awesome-typescript-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.scss$/,
@@ -30,7 +31,6 @@ module.exports = {
             }, {
                 loader: "sass-loader"
             }],
-            // use style-loader in development
             fallback: "style-loader"
         })
       }
@@ -40,14 +40,6 @@ module.exports = {
   devtool: NODE_ENV == 'development'? "source-map" : null,
   plugins: [
     new ExtractTextPlugin("styles.css"),
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false,
-        },
-        output: {
-            comments: false,
-        },
-    }),
     new HtmlWebpackPlugin({
       title: 'WebRecipes',
       cache: true,
@@ -58,5 +50,26 @@ module.exports = {
       autoInstall: false,
       silent: true
     })
-  ]
+  ],
+  devServer: {
+    host: "localhost",
+    port: 9000,
+    hot: true,
+    watchOptions: {
+      poll: true
+    },
+    publicPath: '/'
+  }
 };
+
+if(NODE_ENV !== "development") {
+  module.exports.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+          warnings: false,
+      },
+      output: {
+          comments: false,
+      },
+  }));
+}
