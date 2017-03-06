@@ -1,3 +1,13 @@
-h1 {
-  color: blue;
+main {
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  display: block;
+  h1 {
+    color: blue;
+  }
+  img {
+    box-shadow: 0 0 0 20px green;
+  }
 }

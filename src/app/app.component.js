@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-require("../scss/style.scss");
+require("../assets/scss/styles.scss");
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -16,9 +16,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>I'm still here, am I? Yepp :)</h1>"
-        // templateUrl: './app.component.html'
-        // styleUrls: ['./app.component.scss']
+        templateUrl: './app.component.html',
+        styles: [require('./app.component.scss')]
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
