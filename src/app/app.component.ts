@@ -3,6 +3,6 @@ import '../assets/scss/styles.scss';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styles: [ require('./app.component.scss') ]
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent { }

@@ -17,7 +17,7 @@ AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
         templateUrl: './app.component.html',
-        styles: [require('./app.component.scss')]
+        styleUrls: ['./app.component.scss']
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
