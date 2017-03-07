@@ -61,6 +61,7 @@
     "@angular/platform-browser-dynamic": "^2.4.9",
     "@angular/router": "^3.4.9",
     "core-js": "^2.4.1",
+    "normalize.scss": "^0.1.0",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.0.1",
     "zone.js": "^0.7.7"

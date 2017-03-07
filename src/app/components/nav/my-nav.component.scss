@@ -1,0 +1,21 @@
+@import '../../../assets/scss/vars';
+
+.nav {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  border-top: 1px solid $green;
+  border-bottom: 1px solid $green;
+  background-color: $yellow-5;
+  &-item {
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover {
+      background-color: $green-5;
+    }
+  }
+}

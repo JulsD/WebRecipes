@@ -1,0 +1,17 @@
+@import '../../../assets/scss/vars';
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: $white;
+  .logo-title,
+  .logo-img {
+    padding: 30px;
+    font-size: 20px;
+    color: $green;
+  }
+  .logo-img {
+    font-size: 30px;
+  }
+}

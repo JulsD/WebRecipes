@@ -1,0 +1,18 @@
+@import '../../assets/scss/vars';
+
+main {
+  p {
+    color: $green;
+    font-size: 15px;
+  }
+}
+.panel {
+  box-shadow: 0 0 12px 0 $yellow;
+  border-radius: 5px;
+  font-size: 20px;
+  color: $green;
+  display: block;
+  max-width: 500px;
+  padding: 30px;
+  margin: 30px auto;
+}
