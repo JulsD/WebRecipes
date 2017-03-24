@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'my-nav',
   templateUrl: './my-nav.component.html',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class MyNavComponent {
-  navTags = ['Home', 'Posts', 'About', 'Contacts'];
+  navTags: string[] = ['Home', 'Posts', 'About', 'Contacts'];
 }
