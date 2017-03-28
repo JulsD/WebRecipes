@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-nav.component.scss']
 })
 
-export class MyNavComponent {
+export class NavComponent {
   navTags: string[] = ['Home', 'Posts', 'About', 'Contacts'];
 }

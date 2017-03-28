@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit }    from '@angular/core';
 
+import { Post }         from '../../interfaces/post';
+import { navTags}       from '../../data/nav-tags'
 
 @Component({
   selector: 'home-page',
@@ -8,5 +10,5 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
-  navTags: string[] = ['Home', 'Posts', 'About', 'Contacts'];
+  navTags = navTags;
 }

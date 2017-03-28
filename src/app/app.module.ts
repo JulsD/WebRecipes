@@ -1,45 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
+import { FormsModule }    from '@angular/forms';
+
 import { AppComponent } from './components/app.component';
-import { MyHeaderComponent } from './components/header/my-header.component';
-import { MyNavComponent } from './components/nav/my-nav.component';
+import { HeaderComponent } from './components/header/my-header.component';
+import { NavComponent } from './components/nav/my-nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { PostComponent } from './components/post/post.component';
+import { PostsListComponent } from './components/posts-list/posts-list.component';
 
-const appRoutes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
-    path: 'contacts',
-    component: ContactsComponent
-  },
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  }
-];
+import { PostsService } from './services/posts.service';
+
+import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    MyHeaderComponent,
-    MyNavComponent,
+    HeaderComponent,
+    NavComponent,
     HomeComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    PostsListComponent,
+    PostComponent
   ],
+  providers: [PostsService],
   bootstrap: [ AppComponent ]
 })
 
