@@ -1,7 +1,6 @@
 import { Component, OnInit }    from '@angular/core';
 
 import { Post }         from '../../interfaces/post';
-import { navTags}       from '../../data/nav-tags'
 
 @Component({
   selector: 'home-page',
@@ -9,6 +8,4 @@ import { navTags}       from '../../data/nav-tags'
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent {
-  navTags = navTags;
-}
+export class HomeComponent {}
