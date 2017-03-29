@@ -27,20 +27,6 @@
 }
 .search-block {
   flex: 1 1 auto;
-  .serch-input {
-    border-radius: 5px;
-    border: 1px solid $green;
-    width: 100%;
-    padding: 10px 15px;
-    &:focus {
-      outline-color: $green;
-    }
-  }
-  .filters-block {
-    .filter-item {
-      cursor: pointer;
-    }
-  }
 }
 .post {
   &-item {

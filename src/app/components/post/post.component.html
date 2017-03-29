@@ -1,7 +1,8 @@
 <article class="post-item">
   <!-- <h2>{{post.title}}</h2> -->
   <!-- <h3>{{post.deskr}}</h3> -->
-  <!-- <p>{{post.text}}</p> -->
+  <p>{{post.text | async}}</p>
   55
   <button (click)="goBack()">Back</button>
+  <button (click)="show()">show</button>
 </article>
