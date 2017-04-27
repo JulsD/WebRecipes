@@ -2,16 +2,11 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     let posts = [
-      { id: 11, title: 'Mr. Nice' ,text: 'string', deskr: 'string', comment: 'string'},
-      { id: 12, title: 'Narco' ,text: 'string', deskr: 'string', comment: 'string'},
-      { id: 13, title: 'Bombasto' ,text: 'string', deskr: 'string', comment: 'string'},
-      { id: 14, title: 'Celeritas' ,text: 'string', deskr: 'string', comment: 'string'},
-      { id: 15, title: 'Magneta' ,text: 'string', deskr: 'string', comment: 'string'},
-      { id: 16, title: 'RubberMan' ,text: 'string', deskr: 'string', comment: 'string'},
-      { id: 17, title: 'Dynama' ,text: 'string', deskr: 'string', comment: 'string'},
-      { id: 18, title: 'Dr IQ' ,text: 'string', deskr: 'string', comment: 'string'},
-      { id: 19, title: 'Magma' ,text: 'string', deskr: 'string', comment: 'string'},
-      { id: 20, title: 'Tornado',text: 'string', deskr: 'string', comment: 'string' }
+      { id: 11, title: 'Mr. Nice' ,text: 'Mr. Nice', deskr: 'Mr. Nice', comment: 'Mr. Nice'},
+      { id: 12, title: 'Narco' ,text: 'Narco', deskr: 'Narco', comment: 'Narco'},
+      { id: 13, title: 'Bombasto' ,text: 'Bombasto', deskr: 'Bombasto', comment: 'Bombasto'},
+      { id: 14, title: 'Celeritas' ,text: 'Celeritas', deskr: 'Celeritas', comment: 'Celeritas'},
+      { id: 15, title: 'Magneta' ,text: 'Magneta', deskr: 'Magneta', comment: 'Magneta'}
     ];
     return {posts};
   }

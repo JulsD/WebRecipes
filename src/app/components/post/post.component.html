@@ -1,8 +1,7 @@
-<article class="post-item">
-  <!-- <h2>{{post.title}}</h2> -->
-  <!-- <h3>{{post.deskr}}</h3> -->
-  <p>{{post.text | async}}</p>
-  55
+<article class="post-item" *ngIf="post">
+  <h2>{{post.title}}</h2>
+  <h3>{{post.deskr}}</h3>
+  <p>{{post.text}}</p>
   <button (click)="goBack()">Back</button>
   <button (click)="show()">show</button>
 </article>

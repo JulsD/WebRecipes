@@ -6,7 +6,7 @@ import { Location }                 from '@angular/common';
 import { Post } from '../../interfaces/post';
 import { PostsService } from '../../services/posts.service';
 
-// import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'post',
