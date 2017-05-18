@@ -3,6 +3,9 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
+// Other libs modules
+import { MasonryModule } from 'angular2-masonry';
+
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './data/in-memory-data.service';
@@ -27,7 +30,8 @@ import { AppRoutingModule }     from './app-routing.module';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    MasonryModule
   ],
   declarations: [
     AppComponent,

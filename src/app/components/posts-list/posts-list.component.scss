@@ -1,0 +1,40 @@
+@import '../../../assets/scss/vars';
+@import '../../../assets/scss/mixin';
+
+.posts-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .post-item {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+    &-content {
+      height: 100%;
+      padding: 10px 15px;
+      background-color: $green-1;
+      border-radius: 3px;
+      transition: all .4s;
+      &:hover {
+        box-shadow: 0 0 5px 5px $gray;
+      }
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border-bottom: 1px solid $yellow-5;
+    }
+    h3 {
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 300;
+      color: $gray;
+    }
+    p {
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

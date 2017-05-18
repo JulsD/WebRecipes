@@ -1,13 +1,17 @@
 <div class="posts-wrapper">
-  <article class="post-item"
-          *ngFor="let post of posts">
-    <h2>{{post.title}}</h2>
-    <h3>{{post.deskr}}</h3>
-    <p>{{post.text}}</p>
-    <div class="comment">
-      <label>comment: {{post.comment}}</label>
-      <input [(ngModel)]="post.comment" placeholder="comment">
-    </div>
-    <a [routerLink]="['/post', post.id]">Read More</a>
-  </article>
+  <masonry>
+    <masonry-brick class="post-item"
+            *ngFor="let post of posts">
+      <div class="post-item-content">
+        <h2>{{post.title}}</h2>
+        <h3>{{post.deskr}}</h3>
+        <p>{{post.text}}</p>
+        <div class="comment">
+          <label>comment: {{post.comment}}</label>
+          <input [(ngModel)]="post.comment" placeholder="comment">
+        </div>
+        <a [routerLink]="['/post', post.id]">Read More</a>
+      </div>
+    </masonry-brick>
+  </masonry>
 </div>

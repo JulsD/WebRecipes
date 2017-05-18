@@ -5,6 +5,10 @@ header {
   box-sizing: border-box;
   padding: 0;
   background-color: $white;
+  .wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .logo-title,
   .logo-img {
     padding: 30px;

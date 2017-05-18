@@ -6,7 +6,7 @@ import { PostsService } from '../../services/posts.service';
 @Component({
   selector: 'posts-list',
   templateUrl: './posts-list.component.html',
-  styleUrls: ['./posts-list.component.scss']
+  styleUrls: ['./posts-list.component.scss'],
 })
 
 export class PostsListComponent {
@@ -15,10 +15,12 @@ export class PostsListComponent {
   ){}
 
   posts: Post[];
+  postsWrapper: HTMLDivElement;
 
   ngOnInit(): void {
     this.getPosts();
   }
+
   getPosts(): void {
     this.postsService.getPosts().then(posts => this.posts = posts);
   }

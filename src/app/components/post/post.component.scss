@@ -1,0 +1,29 @@
+@import '../../../assets/scss/vars';
+
+.post-item {
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid $gray;
+  transition: all 4s;
+  &:hover {
+    border-color: $green-5;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-bottom: 1px solid $yellow-5;
+  }
+  h3 {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+    color: $gray;
+  }
+  p {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

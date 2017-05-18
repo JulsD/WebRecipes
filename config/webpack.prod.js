@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
