@@ -3,5 +3,6 @@ export class Post {
   title: string;
   text: string;
   deskr: string;
+  keyWords?: any[];
   comment: string;
 }

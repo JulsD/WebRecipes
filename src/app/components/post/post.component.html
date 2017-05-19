@@ -2,6 +2,13 @@
   <h2>{{post.title}}</h2>
   <h3>{{post.deskr}}</h3>
   <p>{{post.text}}</p>
+  <div class="tags-block">
+    <span class="tag-item" *ngFor="let key of post.keyWords">{{key}}</span>
+  </div>
+  <div class="comment">
+    <label>comment: {{post.comment}}</label>
+    <input [(ngModel)]="post.comment" placeholder="comment">
+  </div>
   <button (click)="goBack()">Back</button>
   <button (click)="show()">show</button>
 </article>

@@ -5,10 +5,9 @@
       <div class="post-item-content">
         <h2>{{post.title}}</h2>
         <h3>{{post.deskr}}</h3>
-        <p>{{post.text}}</p>
-        <div class="comment">
-          <label>comment: {{post.comment}}</label>
-          <input [(ngModel)]="post.comment" placeholder="comment">
+        <p>{{post.text.slice(0,300) + '...'}}</p>
+        <div class="tags-block">
+          <span class="tag-item" *ngFor="let key of post.keyWords">{{key}}</span>
         </div>
         <a [routerLink]="['/post', post.id]">Read More</a>
       </div>
