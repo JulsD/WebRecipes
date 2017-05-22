@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Post } from '../../interfaces/post';
 import { PostsService } from '../../services/posts.service';
@@ -13,6 +13,8 @@ export class PostsListComponent {
   constructor(
     private postsService: PostsService,
   ){}
+
+  @Input()
 
   posts: Post[];
   postsWrapper: HTMLDivElement;

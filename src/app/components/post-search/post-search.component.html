@@ -1,9 +1,7 @@
 
 <input #searchBox id="search-box" (keyup)="search(searchBox.value)" type="search" class="serch-input">
-<div>
-  <div *ngFor="let post of posts | async"
-       class="search-result" >
-    {{post.title}}
-    <a [routerLink]="['/post', post.id]">Read More</a>
+<div *ngIf="posts$ | async; let posts">
+  <div class="search-result" *ngIf="posts.length > 0">
+    {{posts.length}} posts found.
   </div>
 </div>

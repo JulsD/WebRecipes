@@ -1,6 +1,7 @@
-import { Component, OnInit }    from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
-import { Post }         from '../../interfaces/post';
+import { Post } from '../../interfaces/post';
 
 @Component({
   selector: 'home-page',
@@ -8,4 +9,6 @@ import { Post }         from '../../interfaces/post';
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent {}
+export class HomeComponent {
+  @Input() posts: Observable<Post[]>;
+}
