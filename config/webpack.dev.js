@@ -7,7 +7,7 @@ var helpers = require('./helpers');
 module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-module-eval-source-map',
   output: {
-    path: helpers.root('dist'),
+    path: helpers.root('build'),
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
   },

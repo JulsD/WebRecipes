@@ -11,11 +11,15 @@ header {
   }
   .logo-title,
   .logo-img {
-    padding: 30px;
-    font-size: 20px;
     color: $green;
   }
-  .logo-img {
+  .logo-title {
+    padding: 25px;
     font-size: 30px;
+  }
+  .logo-img {
+    margin: auto 0;
+    padding: 15px;
+    font-size: 70px;
   }
 }
