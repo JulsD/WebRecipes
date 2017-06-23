@@ -29,8 +29,12 @@ module.exports = {
         loader: 'html-loader'
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+        test: /\.(png|jpe?g|gif|ico)$/,
         loader: 'file-loader?name=assets/[name].[hash].[ext]'
+      },
+      {
+        test: /\.(svg|woff|woff2|ttf|eot)$/,
+        loader: 'file-loader?name=assets/fonts/[name].[hash].[ext]'
       },
       {
         test: /\.scss$/,
